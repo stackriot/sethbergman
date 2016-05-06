@@ -2,9 +2,9 @@ var express = require('express');
 var favicon = require('serve-favicon');
 var app = express();
 
+app.use(favicon(__dirname + '/favicon.ico'));
 app.use('/assets', express.static(__dirname + '/assets'));
 //var _favicon = favicon(__dirname + '/favicon.ico');
-app.use(favicon(__dirname + '/favicon.ico'));
 
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
