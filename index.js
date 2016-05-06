@@ -3,16 +3,14 @@ var favicon = require('serve-favicon');
 var app = express();
 
 app.use('/assets', express.static(__dirname + '/assets'));
-//var _favicon = favicon(__dirname + '/assets/images/favicon.png');
+//var _favicon = favicon(__dirname + '/favicon.ico');
+app.use(favicon(__dirname + '/assets/images/favicon.png'));
 
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 
 app.get('/', function(request, response) {
   response.render('pages/index');
-});
-app.get('/assets/images/favicon.png', function(request, response) {
-  response.render('assets/images/favicon.png');
 });
 
 var server = app.listen(process.env.PORT | 5000, function () {
