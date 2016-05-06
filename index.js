@@ -1,9 +1,9 @@
 var express = require('express');
+var favicon = require('serve-favicon');
 var app = express();
 
-// app.set('port', (process.env.PORT || 5000));
-
 app.use('/assets', express.static(__dirname + '/assets'));
+//app.use(favicon(__dirname + '/assets/images/favicon.png'));
 
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
