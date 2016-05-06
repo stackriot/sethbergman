@@ -12,7 +12,7 @@ app.get('/', function(request, response) {
   response.render('pages/index');
 });
 app.get('/favicon.png', function(request, response) {
-  response.render('assets/images/favicon.png');
+  response.render('favicon.png');
 });
 
 var server = app.listen(process.env.PORT | 5000, function () {
