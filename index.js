@@ -4,7 +4,7 @@ var app = express();
 
 app.use('/assets', express.static(__dirname + '/assets'));
 //var _favicon = favicon(__dirname + '/favicon.ico');
-app.use(favicon(__dirname + '/assets/images/favicon.png'));
+//app.use(favicon(__dirname + '/assets/images/favicon.png'));
 
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
